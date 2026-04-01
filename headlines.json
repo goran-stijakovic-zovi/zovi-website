@@ -1,0 +1,22 @@
+[
+  { "source": "OpenAI",    "text": "GPT-5 achieves human-level performance on 87% of professional benchmark tasks" },
+  { "source": "Gartner",   "text": "Agentic AI is the #1 technology priority for CIOs in the 2026 annual survey" },
+  { "source": "Microsoft", "text": "Azure AI Foundry launches real-time agent orchestration for enterprise workflows" },
+  { "source": "MIT",       "text": "AI-augmented development teams ship 3.4× faster with 28% fewer production defects" },
+  { "source": "Anthropic", "text": "Extended thinking mode reduces hallucination rate by 62% on complex reasoning tasks" },
+  { "source": "Bloomberg", "text": "Enterprise AI adoption reaches 71% globally — up from 42% in 2024" },
+  { "source": "Google",    "text": "Gemini Ultra 2.0 achieves state-of-the-art results on multimodal enterprise benchmarks" },
+  { "source": "Forrester", "text": "Companies that adopted AI coding tools report 40% faster feature delivery cycles" },
+  { "source": "GitHub",    "text": "Copilot Workspace now generates full pull requests from plain-language issue descriptions" },
+  { "source": "DeepMind",  "text": "AlphaCode 3 solves competitive programming challenges at Grandmaster level" },
+  { "source": "Salesforce","text": "60% of Fortune 500 companies now run at least one autonomous AI agent in production" },
+  { "source": "AWS",       "text": "Bedrock Agents adds multi-agent orchestration for complex enterprise workflow automation" },
+  { "source": "McKinsey",  "text": "AI early adopters generate 3–5× higher returns on digital transformation investments" },
+  { "source": "EU",        "text": "AI Act enforcement begins — enterprises face mandatory risk assessments for high-impact systems" },
+  { "source": "NVIDIA",    "text": "New inference chips cut LLM serving costs by 60% for enterprise deployments" },
+  { "source": "Stanford",  "text": "RAG architectures outperform fine-tuning for domain-specific enterprise deployments" },
+  { "source": "Databricks","text": "Lakehouse AI platform adoption doubles as companies unify data and ML workflows" },
+  { "source": "Accenture", "text": "74% of executives say AI ROI exceeds expectations when led by technical leadership" },
+  { "source": "IDC",       "text": "Global AI spending to reach $632 billion by 2028 — infrastructure and services lead" },
+  { "source": "Andreessen","text": "Agentic software development could automate 80% of routine engineering tasks by 2027" }
+]
