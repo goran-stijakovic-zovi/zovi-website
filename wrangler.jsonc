@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "zovi-website",
+  "compatibility_date": "2025-09-27",
+  "assets": {
+    "directory": ".",
+    "exclude": [
+      ".git",
+      ".github",
+      "scripts",
+      "netlify.toml",
+      "wrangler.jsonc",
+      ".wrangler",
+      ".gitignore"
+    ]
+  }
+}
