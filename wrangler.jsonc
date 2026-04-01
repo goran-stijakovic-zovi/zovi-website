@@ -2,6 +2,9 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "zovi-website",
   "compatibility_date": "2025-09-27",
+  "observability": {
+    "enabled": true
+  },
   "assets": {
     "directory": ".",
     "exclude": [
@@ -13,5 +16,8 @@
       ".wrangler",
       ".gitignore"
     ]
-  }
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
 }
