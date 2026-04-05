@@ -1,6 +1,10 @@
 [
   {
     "source": "TechCrunch AI",
+    "text": "Anthropic says Claude Code subscribers will need to pay extra for OpenClaw usage"
+  },
+  {
+    "source": "TechCrunch AI",
     "text": "Anthropic is having a moment in the private markets; SpaceX could spoil the party"
   },
   {
@@ -18,10 +22,6 @@
   {
     "source": "TechCrunch AI",
     "text": "AI companies are building huge natural gas plants to power data centers. What could go wrong?"
-  },
-  {
-    "source": "TechCrunch AI",
-    "text": "The Facebook insider building content moderation for the AI era"
   },
   {
     "source": "MIT Tech Review",
@@ -73,10 +73,10 @@
   },
   {
     "source": "The Verge AI",
-    "text": "Really, you made this without AI? Prove it"
+    "text": "I let Gemini in Google Maps plan my day and it went surprisingly well"
   },
   {
     "source": "The Verge AI",
-    "text": "Anthropic essentially bans OpenClaw from Claude by making subscribers pay extra"
+    "text": "A folk musician became a target for AI fakes and a copyright troll"
   }
 ]
