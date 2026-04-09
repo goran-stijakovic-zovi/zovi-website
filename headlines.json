@@ -1,6 +1,22 @@
 [
   {
     "source": "TechCrunch AI",
+    "text": "Amazon CEO takes aim at Nvidia, Intel, Starlink, more in annual shareholder letter"
+  },
+  {
+    "source": "TechCrunch AI",
+    "text": "Poke makes using AI agents as easy as sending a text"
+  },
+  {
+    "source": "TechCrunch AI",
+    "text": "AWS boss explains why investing billions in both Anthropic and OpenAI is an OK conflict"
+  },
+  {
+    "source": "TechCrunch AI",
+    "text": "Tubi is the first streamer to launch a native app within ChatGPT"
+  },
+  {
+    "source": "TechCrunch AI",
     "text": "Astropad’s Workbench reimagines remote desktop for AI agents, not IT support"
   },
   {
@@ -8,20 +24,8 @@
     "text": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation"
   },
   {
-    "source": "TechCrunch AI",
-    "text": "Atlassian launches visual AI tools and third-party agents in Confluence"
-  },
-  {
-    "source": "TechCrunch AI",
-    "text": "Google quietly launched an AI dictation app that works offline"
-  },
-  {
-    "source": "TechCrunch AI",
-    "text": "I can’t help rooting for tiny open source AI model maker Arcee"
-  },
-  {
-    "source": "TechCrunch AI",
-    "text": "Firmus, the ‘Southgate’ AI data center builder backed by Nvidia, hits $5.5B valuation"
+    "source": "MIT Tech Review",
+    "text": "The Download: AstroTurf wars and exponential AI growth"
   },
   {
     "source": "MIT Tech Review",
@@ -42,10 +46,6 @@
   {
     "source": "MIT Tech Review",
     "text": "The one piece of data that could actually shed light on your job and AI"
-  },
-  {
-    "source": "MIT Tech Review",
-    "text": "AI is changing how small online sellers decide what to make"
   },
   {
     "source": "Google AI Blog",
@@ -73,10 +73,10 @@
   },
   {
     "source": "The Verge AI",
-    "text": "Meta is reentering the AI race with a new model called Muse Spark"
+    "text": "The AI industry’s race for profits is now existential"
   },
   {
     "source": "The Verge AI",
-    "text": "The vibes are off at OpenAI"
+    "text": "Gemini gets notebooks to help you organize projects"
   }
 ]
