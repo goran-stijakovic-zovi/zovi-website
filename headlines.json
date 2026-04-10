@@ -1,27 +1,31 @@
 [
   {
     "source": "TechCrunch AI",
+    "text": "ChatGPT finally offers $100/month Pro plan"
+  },
+  {
+    "source": "TechCrunch AI",
+    "text": "Florida AG announces investigation into OpenAI over shooting that allegedly involved ChatGPT"
+  },
+  {
+    "source": "TechCrunch AI",
+    "text": "Meta AI app climbs to No. 5 on the App Store after Muse Spark launch"
+  },
+  {
+    "source": "TechCrunch AI",
+    "text": "Is Anthropic limiting the release of Mythos to protect the internet — or Anthropic?"
+  },
+  {
+    "source": "TechCrunch AI",
+    "text": "Google and Intel deepen AI infrastructure partnership"
+  },
+  {
+    "source": "TechCrunch AI",
     "text": "Amazon CEO takes aim at Nvidia, Intel, Starlink, more in annual shareholder letter"
   },
   {
-    "source": "TechCrunch AI",
-    "text": "Poke makes using AI agents as easy as sending a text"
-  },
-  {
-    "source": "TechCrunch AI",
-    "text": "AWS boss explains why investing billions in both Anthropic and OpenAI is an OK conflict"
-  },
-  {
-    "source": "TechCrunch AI",
-    "text": "Tubi is the first streamer to launch a native app within ChatGPT"
-  },
-  {
-    "source": "TechCrunch AI",
-    "text": "Astropad’s Workbench reimagines remote desktop for AI agents, not IT support"
-  },
-  {
-    "source": "TechCrunch AI",
-    "text": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation"
+    "source": "MIT Tech Review",
+    "text": "The Download: an exclusive Jeff VanderMeer story and AI models too scary to release"
   },
   {
     "source": "MIT Tech Review",
@@ -38,14 +42,6 @@
   {
     "source": "MIT Tech Review",
     "text": "Enabling agent-first process redesign"
-  },
-  {
-    "source": "MIT Tech Review",
-    "text": "The Download: AI’s impact on jobs, and data centres in space"
-  },
-  {
-    "source": "MIT Tech Review",
-    "text": "The one piece of data that could actually shed light on your job and AI"
   },
   {
     "source": "Google AI Blog",
@@ -73,10 +69,14 @@
   },
   {
     "source": "The Verge AI",
-    "text": "The AI industry’s race for profits is now existential"
+    "text": "Fear and loathing at OpenAI"
   },
   {
     "source": "The Verge AI",
-    "text": "Gemini gets notebooks to help you organize projects"
+    "text": "Gen Z’s love-hate relationship with AI"
+  },
+  {
+    "source": "The Verge AI",
+    "text": "Microsoft starts removing Copilot buttons from Windows 11 apps"
   }
 ]
