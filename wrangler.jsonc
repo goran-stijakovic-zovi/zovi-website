@@ -20,5 +20,9 @@
   },
   "compatibility_flags": [
     "nodejs_compat"
+  ],
+  "routes": [
+    { "pattern": "zoviconsulting.com/*", "zone_name": "zoviconsulting.com" },
+    { "pattern": "www.zoviconsulting.com/*", "zone_name": "zoviconsulting.com" }
   ]
 }
