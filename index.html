@@ -675,6 +675,18 @@ const FALLBACK = [
   { source: "Bloomberg",text: "Enterprise AI adoption reaches 71% globally — up from 42% in 2024" }
 ];
 
+// ─── Ticker mode: 'daily' = headlines.json | 'weekly' = 7-day archive ──
+const HEADLINE_MODE = 'daily'; // change to 'weekly' to pull from dated archive
+
+// ─── Fisher-Yates shuffle (in-place, returns array) ──────────
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 // ─── Build ticker ────────────────────────────────────────────
 function buildTicker(headlines) {
   const track = document.getElementById('ticker-track');
@@ -697,15 +709,42 @@ function escapeHtml(str) {
   return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
 
-// ─── Load headlines.json (fallback to embedded) ──────────────
+// ─── Load headlines (daily or weekly mode, fallback to embedded) ─
 async function loadTicker() {
   try {
-    const res = await fetch('./headlines.json');
-    if (!res.ok) throw new Error('fetch failed');
-    const data = await res.json();
-    buildTicker(data);
+    let data;
+    if (HEADLINE_MODE === 'weekly') {
+      // Merge up to 7 days of archived headlines into one shuffled pool
+      const today = new Date();
+      const fetches = [];
+      for (let d = 0; d < 7; d++) {
+        const dt = new Date(today);
+        dt.setUTCDate(today.getUTCDate() - d);
+        const dateStr = dt.toISOString().slice(0, 10);
+        fetches.push(
+          fetch(`./headlines/${dateStr}.json`)
+            .then(r => r.ok ? r.json() : [])
+            .catch(() => [])
+        );
+      }
+      const results = await Promise.all(fetches);
+      // Deduplicate by headline text, flatten
+      const seen = new Set();
+      data = results.flat().filter(h => {
+        if (seen.has(h.text)) return false;
+        seen.add(h.text);
+        return true;
+      });
+    } else {
+      // Default: daily mode
+      const res = await fetch('./headlines.json');
+      if (!res.ok) throw new Error('fetch failed');
+      data = await res.json();
+    }
+    if (!data || data.length === 0) throw new Error('empty');
+    buildTicker(shuffle(data));
   } catch {
-    buildTicker(FALLBACK);
+    buildTicker(shuffle([...FALLBACK]));
   }
 }
 loadTicker();

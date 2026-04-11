@@ -1,12 +1,12 @@
-# ─── Option B: Auto-update AI headlines daily ─────────────────
-# This GitHub Action runs every morning, fetches headlines from
-# RSS feeds, overwrites headlines.json, commits & pushes.
-# Netlify sees the new commit and redeploys automatically.
-# Zero manual work after setup.
+# ─── Auto-update AI headlines daily ───────────────────────────
+# Runs every morning, fetches headlines from 10 RSS feeds,
+# overwrites headlines.json AND saves a dated archive file to
+# headlines/YYYY-MM-DD.json (kept for 7 days rolling window).
+# Commits & pushes — Cloudflare Workers picks up the new deploy.
 #
 # To enable:
 #   1. Push this repo to GitHub
-#   2. Connect repo to Netlify (auto-deploys on push)
+#   2. Ensure CF_API_TOKEN secret is set for wrangler deploy
 #   3. This action runs at 7am EST daily
 # ──────────────────────────────────────────────────────────────
 
@@ -36,13 +36,13 @@ jobs:
         run: pip install feedparser requests
 
       - name: Fetch and update headlines
-        run: python scripts/fetch-headlines.py
+        run: python scripts/fetch-headlines.py --archive
 
       - name: Commit and push if changed
         run: |
           git config --global user.name  'headline-bot'
           git config --global user.email 'bot@zoviconsulting.com'
-          git add headlines.json
+          git add headlines.json headlines/
           git diff --staged --quiet || (
             git commit -m "chore: update AI headlines $(date -u '+%Y-%m-%d') [skip ci]" &&
             git push
