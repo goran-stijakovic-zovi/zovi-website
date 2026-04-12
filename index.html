@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
 <style>
 /* ─── Reset ─────────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -617,7 +618,7 @@ footer{
       Founded on real freelance delivery experience — and the platform that experience created.
     </p>
     <div class="hero-ctas fade-up d3">
-      <a class="btn-hero" href="mailto:goran.stijakovic@zoviconsulting.com">Book a Discovery Call →</a>
+      <a class="btn-hero" href="https://calendly.com/goran-stijakovic-zoviconsulting/discovery-call" onclick="return openCalendly()">Book a Discovery Call →</a>
       <a class="btn-outline" href="#services">Our Services</a>
     </div>
     <div class="stats fade-up d4">
@@ -826,9 +827,12 @@ footer{
       just an honest conversation about what's possible.
     </p>
     <div class="cta-btns">
-      <a class="btn-hero" href="mailto:office@zoviconsulting.com">office@zoviconsulting.com</a>
+      <a class="btn-hero" href="https://calendly.com/goran-stijakovic-zoviconsulting/discovery-call" onclick="return openCalendly()">Book a Discovery Call →</a>
       <a class="btn-outline" href="https://www.linkedin.com/company/zovi-llc" target="_blank" rel="noopener">LinkedIn →</a>
     </div>
+    <p style="margin-top:1.25rem;font-size:.85rem;color:var(--text-m)">
+      or email <a href="mailto:office@zoviconsulting.com" style="color:var(--text-s);text-decoration:none;border-bottom:1px solid rgba(248,250,252,.2);padding-bottom:1px">office@zoviconsulting.com</a>
+    </p>
   </div>
 </section>
 
@@ -847,6 +851,17 @@ footer{
 </footer>
 
 <script>
+// ─── Calendly popup ─────────────────────────────────────────
+const CALENDLY_URL = 'https://calendly.com/goran-stijakovic-zoviconsulting/discovery-call';
+function openCalendly() {
+  if (window.Calendly) {
+    Calendly.initPopupWidget({url: CALENDLY_URL});
+  } else {
+    window.open(CALENDLY_URL, '_blank');
+  }
+  return false;
+}
+
 // ─── Fallback headlines (used if headlines.json not loaded) ──
 const FALLBACK = [
   { source: "OpenAI",   text: "GPT-5 achieves human-level performance on 87% of professional benchmark tasks" },
@@ -1009,5 +1024,6 @@ document.querySelectorAll('.fade-up').forEach(el => {
   observer.observe(el);
 });
 </script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
