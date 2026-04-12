@@ -461,6 +461,104 @@ footer{
   .steps{grid-template-columns:1fr}
   .pillars{grid-template-columns:1fr}
 }
+
+/* ─── Tag highlight ─────────────────────────────────────────── */
+.tag--highlight{
+  color:var(--accent);
+  border-color:var(--accent);
+  background:rgba(85,198,193,.1);
+  font-weight:600;
+}
+
+/* ─── Origins ───────────────────────────────────────────────── */
+#origins{padding:6rem 1.5rem}
+.origins__header{text-align:center;margin-bottom:3.5rem}
+.origins__subtitle{color:var(--text-s);margin-top:.75rem;font-size:1.05rem}
+.origins__grid{
+  max-width:1280px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;
+}
+.origin-card{
+  background:var(--bg-r);border:1px solid var(--border);
+  border-radius:12px;padding:2rem;
+  display:flex;flex-direction:column;gap:1rem;
+  transition:border-color 250ms,box-shadow 250ms,transform 250ms;
+}
+.origin-card:hover{
+  border-color:rgba(85,198,193,.3);
+  box-shadow:0 0 32px rgba(85,198,193,.1),0 8px 32px rgba(0,0,0,.6);
+  transform:translateY(-3px);
+}
+.origin-card__tag{
+  display:flex;align-items:center;justify-content:space-between;gap:.5rem;
+  font-size:.73rem;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--text-s);
+}
+.origin-card__badge{
+  font-size:.68rem;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--text-m);
+  border:1px solid var(--border);border-radius:4px;padding:.15rem .5rem;
+  flex-shrink:0;
+}
+.origin-card__title{
+  font-family:'Syne',sans-serif;font-weight:700;
+  font-size:1.1rem;color:var(--text);
+}
+.origin-card__body{font-size:.89rem;color:var(--text-s);line-height:1.65}
+.origins__footer{
+  max-width:1280px;margin:2.5rem auto 0;
+  text-align:center;font-size:1.05rem;font-weight:600;color:var(--text-s);
+}
+.origins__footer strong{color:var(--accent)}
+
+/* ─── Platform teaser ───────────────────────────────────────── */
+#platform{
+  padding:6rem 1.5rem;
+  background:var(--bg-r);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  position:relative;overflow:hidden;
+}
+#platform::before{
+  content:'';
+  position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(85,198,193,.08),transparent 70%);
+}
+.platform-teaser__inner{max-width:800px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.platform-teaser__eyebrow{
+  display:block;font-size:.73rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--accent);
+  margin-bottom:1rem;
+}
+.platform-teaser__title{
+  font-family:'Syne',sans-serif;font-weight:800;
+  font-size:clamp(2rem,5vw,3.5rem);
+  letter-spacing:-0.03em;color:var(--text);margin-bottom:1rem;
+}
+.platform-teaser__subtitle{font-size:clamp(1rem,2vw,1.2rem);color:var(--text-s);margin-bottom:2.5rem}
+.platform-teaser__body{text-align:left;margin-bottom:3rem}
+.platform-teaser__body p{color:var(--text-s);line-height:1.75;margin-bottom:1.25rem}
+.platform-teaser__body p:last-child{margin-bottom:0}
+.platform-teaser__stats{
+  display:flex;gap:2.5rem;justify-content:center;
+  flex-wrap:wrap;margin-bottom:3rem;
+  padding:2rem;background:var(--bg-e);
+  border:1px solid var(--border);border-radius:12px;
+}
+.platform-stat__value{
+  font-family:'Syne',sans-serif;font-weight:800;
+  font-size:1.75rem;color:var(--accent);display:block;
+}
+.platform-stat__label{font-size:.8rem;color:var(--text-m);margin-top:2px;display:block}
+.platform-teaser__coming-soon{
+  font-size:.8rem;color:var(--text-m);
+  text-transform:uppercase;letter-spacing:.1em;
+  font-weight:600;margin-bottom:.75rem;
+}
+
+/* ─── About additions ───────────────────────────────────────── */
+.about-origin{font-style:italic;border-left:2px solid rgba(85,198,193,.3);padding-left:1rem}
+.pillar--highlight{border-color:rgba(85,198,193,.3);background:var(--bg-s)}
 </style>
 </head>
 <body>
@@ -509,13 +607,14 @@ footer{
 <section id="hero">
   <div class="hero-glow"></div>
   <div class="hero-content">
-    <p class="eyebrow fade-up" style="margin-bottom:1.5rem">AI Strategy &amp; Technology Consulting</p>
+    <p class="eyebrow fade-up" style="margin-bottom:1.5rem">AI Consulting. Powered by our own delivery platform.</p>
     <h1 class="hero-headline fade-up d1">
       We help companies <span style="color:var(--accent)">build smarter</span> with AI.
     </h1>
     <p class="hero-sub fade-up d2">
       Zovi is a boutique consulting firm specializing in AI adoption, custom software delivery,
       and data strategy for growth-stage companies and enterprise teams.
+      Founded on real freelance delivery experience — and the platform that experience created.
     </p>
     <div class="hero-ctas fade-up d3">
       <a class="btn-hero" href="mailto:goran.stijakovic@zoviconsulting.com">Book a Discovery Call →</a>
@@ -549,6 +648,77 @@ footer{
   </div>
 </section>
 
+<!-- ─── Origins ───────────────────────────────────────────── -->
+<section id="origins">
+  <div class="origins__header">
+    <h2 class="section-title" style="font-size:clamp(2rem,4vw,2.75rem)">The Work That Started It All</h2>
+    <p class="origins__subtitle">Before Zovi LLC existed, there were three freelance projects — and one recurring problem.</p>
+  </div>
+  <div class="origins__grid">
+    <div class="origin-card">
+      <div class="origin-card__tag">
+        <span>Business Process Automation</span>
+        <span class="origin-card__badge">Freelance</span>
+      </div>
+      <div class="origin-card__title">BPM Platform</div>
+      <p class="origin-card__body">A platform for designing and automating business processes, connected to existing systems via REST API and message broker integrations. Building this revealed how much time gets lost between what product teams want and what engineering teams actually ship.</p>
+    </div>
+    <div class="origin-card">
+      <div class="origin-card__tag">
+        <span>Document Management</span>
+        <span class="origin-card__badge">Freelance</span>
+      </div>
+      <div class="origin-card__title">Light DMS</div>
+      <p class="origin-card__body">A lightweight, fully paperless document management system with built-in digital signing and compliance traceability. Another project where the delivery friction — status meetings, drifting requirements, late QA — cost more time than the actual development.</p>
+    </div>
+    <div class="origin-card">
+      <div class="origin-card__tag">
+        <span>Insurance Operations</span>
+        <span class="origin-card__badge">Freelance</span>
+      </div>
+      <div class="origin-card__title">Insurance Portal</div>
+      <p class="origin-card__body">A comprehensive insurance operations portal with end-to-end task management and deep third-party integrations. The same lesson, for the third time: the hardest part of software delivery isn't writing the code.</p>
+    </div>
+  </div>
+  <div class="origins__footer">
+    <p>Three projects. Three industries. One pattern. That pattern became <strong>zovi</strong>.</p>
+  </div>
+</section>
+
+<!-- ─── Platform teaser ────────────────────────────────────── -->
+<section id="platform">
+  <div class="platform-teaser__inner">
+    <span class="platform-teaser__eyebrow">Introducing</span>
+    <h2 class="platform-teaser__title">zovi</h2>
+    <p class="platform-teaser__subtitle">The platform born from real delivery pain.</p>
+    <div class="platform-teaser__body">
+      <p>After years of freelance work across three different industries, the same bottleneck kept appearing — the gap between what software teams intend to build and what actually gets delivered, and how long it takes.</p>
+      <p>So the answer became a product.</p>
+      <p><strong>zovi</strong> is an AI-native product delivery platform that connects product management to engineering through a closed-loop, AI-orchestrated workflow. Requirements go in. Production-ready software comes out. Full traceability throughout. What used to take weeks, we're doing in days.</p>
+      <p>That product is what led to founding Zovi LLC — not just a consulting firm, but a consulting firm with zovi at its core.</p>
+    </div>
+    <div class="platform-teaser__stats">
+      <div>
+        <span class="platform-stat__value">3–7 days</span>
+        <span class="platform-stat__label">PRD-to-production cycle</span>
+      </div>
+      <div>
+        <span class="platform-stat__value">vs. 2–6 weeks</span>
+        <span class="platform-stat__label">Traditional delivery</span>
+      </div>
+      <div>
+        <span class="platform-stat__value">100%</span>
+        <span class="platform-stat__label">Requirements traceability</span>
+      </div>
+    </div>
+    <div class="platform-teaser__cta">
+      <p class="platform-teaser__coming-soon">Coming soon</p>
+      <!-- TODO: Replace href with https://www.2051zovi.me once domain is live -->
+      <a class="btn-hero" href="mailto:office@zoviconsulting.com?subject=2051zovi.me Early Access">Get notified &rarr;</a>
+    </div>
+  </div>
+</section>
+
 <!-- ─── About ─────────────────────────────────────────────── -->
 <section id="about">
   <div class="container">
@@ -556,6 +726,13 @@ footer{
       <div>
         <p class="eyebrow" style="margin-bottom:1.25rem">Why Zovi</p>
         <h2 class="about-title">Senior talent.<br>No fluff. Real outcomes.</h2>
+        <p class="about-text about-origin">
+          Zovi didn't start in a boardroom. It started in the field — years of independent freelance delivery
+          across business process automation, document management, and insurance operations. Every project taught
+          the same lesson: the hardest part of software delivery isn't writing the code. It's everything around it.
+          That experience produced <strong>zovi</strong>, an AI-native delivery platform. And zovi produced Zovi —
+          a consulting firm with a product at its core, built to bring that same delivery infrastructure to other organizations.
+        </p>
         <p class="about-text">
           We are a team of engineers, architects, and data scientists who have shipped AI products at scale —
           not just advised on them. Every engagement is led by a senior practitioner, not handed off to a junior bench.
@@ -585,6 +762,11 @@ footer{
           <div class="pillar-dot"></div>
           <div class="pillar-title">Boutique scale</div>
           <div class="pillar-body">Small enough to care deeply. Experienced enough to handle enterprise complexity.</div>
+        </div>
+        <div class="pillar pillar--highlight">
+          <div class="pillar-dot"></div>
+          <div class="pillar-title">Product-backed</div>
+          <div class="pillar-body">We don't just consult. We built zovi — our own AI delivery platform — from the same problems our clients face.</div>
         </div>
       </div>
     </div>
@@ -760,8 +942,9 @@ const SERVICES = [
   {
     icon: '◈',
     title: 'Custom AI Development',
-    desc: 'End-to-end engineering of AI-powered products — RAG pipelines, agentic workflows, fine-tuned models, and integrations built on Azure OpenAI, Anthropic, and open-source models.',
-    tags: ['RAG', 'Agentic AI', 'Azure OpenAI', '.NET']
+    desc: 'End-to-end engineering of AI-powered products — RAG pipelines, agentic workflows, fine-tuned models, and integrations built on Azure OpenAI, Anthropic, and open-source models. Accelerated by zovi, our proprietary AI-native delivery platform.',
+    tags: ['RAG', 'Agentic AI', 'Azure OpenAI', '.NET'],
+    highlightTags: ['zovi']
   },
   {
     icon: '◎',
@@ -797,7 +980,7 @@ SERVICES.forEach(s => {
     <div class="service-icon">${s.icon}</div>
     <div class="service-title">${s.title}</div>
     <div class="service-desc">${s.desc}</div>
-    <div class="service-tags">${s.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>`;
+    <div class="service-tags">${[...s.tags.map(t=>`<span class="tag">${t}</span>`),...(s.highlightTags||[]).map(t=>`<span class="tag tag--highlight">${t}</span>`)].join('')}</div>`;
   grid.appendChild(card);
 });
 
