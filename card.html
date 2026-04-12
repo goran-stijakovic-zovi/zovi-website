@@ -204,6 +204,39 @@ body{
   opacity:.85;
 }
 
+/* ─── QR section ───────────────────────────────────────────── */
+.qr-section{
+  margin-top:2rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.75rem;
+  width:100%;
+}
+.qr-label{
+  font-size:.7rem;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--text-m);
+}
+.qr-wrap{
+  padding:14px;
+  background:var(--bg-e);
+  border-radius:12px;
+  border:1px solid var(--border);
+  display:inline-flex;
+}
+.qr-wrap img{
+  display:block;
+  border-radius:4px;
+}
+.qr-url{
+  font-size:.75rem;
+  color:var(--text-s);
+  letter-spacing:.02em;
+}
+
 /* ─── Footer ────────────────────────────────────────────────── */
 .footer{
   margin-top:2rem;
@@ -272,6 +305,14 @@ body{
       Send Email
     </a>
 
+  </div>
+
+  <div class="qr-section">
+    <p class="qr-label">Share this card</p>
+    <div class="qr-wrap">
+      <img src="qr.svg" alt="QR code for zoviconsulting.com/card" width="140" height="140"/>
+    </div>
+    <p class="qr-url">zoviconsulting.com/card</p>
   </div>
 
   <p class="footer">zoviconsulting.com</p>
