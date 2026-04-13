@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>zovi | AI orchestration layer</title>
+<meta name="description" content="zovi: AI orchestration layer for enterprise AI delivery. Coming soon."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --bg: #070C10;
+  --bg-r: #0D1419;
+  --text: #F8FAFC;
+  --text-s: #94A3B8;
+  --text-m: #475569;
+  --accent: #55C6C1;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.logo .z {
+  color: var(--accent);
+}
+
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--text-s);
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+  max-width: 520px;
+}
+
+.signup-section {
+  margin-bottom: 2rem;
+}
+
+.signup-label {
+  font-size: 0.85rem;
+  color: var(--text-m);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.signup-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+input[type="email"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.875rem 1rem;
+  background: var(--bg-r);
+  border: 1px solid rgba(248, 250, 252, 0.08);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  transition: border-color 200ms, background 200ms;
+}
+
+input[type="email"]::placeholder {
+  color: var(--text-m);
+}
+
+input[type="email"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(85, 198, 193, 0.05);
+}
+
+button {
+  padding: 0.875rem 1.5rem;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 8px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 200ms, transform 100ms;
+  white-space: nowrap;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.footer-nav {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(248, 250, 252, 0.08);
+}
+
+.footer-nav a {
+  color: var(--text-m);
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin: 0 1rem;
+  transition: color 200ms;
+}
+
+.footer-nav a:hover {
+  color: var(--text-s);
+}
+
+@media (max-width: 420px) {
+  .container {
+    padding: 1.25rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .signup-form {
+    flex-direction: column;
+  }
+
+  input[type="email"] {
+    min-width: 100%;
+  }
+
+  .footer-nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="logo"><span class="z">z</span>ovi</div>
+    <h1>AI orchestration layer</h1>
+    <p class="tagline">For enterprise AI delivery</p>
+  </header>
+
+  <main>
+    <p class="description">
+      zovi is a platform for teams shipping production AI systems. Orchestrate pipelines, manage deployments, track performance, and iterate faster.
+    </p>
+
+    <div class="signup-section">
+      <label class="signup-label">Get notified at launch</label>
+      <form class="signup-form" onsubmit="handleSignup(event)">
+        <input type="email" placeholder="your@email.com" required/>
+        <button type="submit">Notify me →</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer-nav">
+    <a href="/">Back to Zovi</a>
+    <a href="mailto:office@zoviconsulting.com">Contact</a>
+  </footer>
+</div>
+
+<script>
+function handleSignup(e) {
+  e.preventDefault();
+  const email = e.target.querySelector('input[type="email"]').value;
+  // TODO: Connect to email service (Mailchimp, ConvertKit, etc.)
+  alert(`Thanks! We'll notify ${email} when zovi launches.`);
+  e.target.reset();
+}
+</script>
+
+</body>
+</html>
